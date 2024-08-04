@@ -1,0 +1,42 @@
+.uploadFile{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.upload-content{
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+.upload-content span{
+    display:inline-block;
+    width: 90px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid;
+    margin: 4px;
+}
+
+.upload-content span:hover{
+    zoom:110%;
+    border: 1px solid rgb(0, 221, 255);
+    box-shadow: 0px 0px 3px 2px rgb(0, 221, 255);
+    cursor: pointer;
+}
+
+.upload-content img{
+    width: 100px;
+    border-radius: 10px;
+}
+
+
+
+canvas{
+    all: unset;
+}

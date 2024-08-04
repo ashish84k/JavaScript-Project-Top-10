@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Toggle Example</title>
+    <style>
+        .password-container {
+            position: relative;
+            display: inline-block;
+            align-items: center;
+        }
+        
+        .password-container input[type="password"] {
+            padding-right: 30px; /* Space for the toggle button */
+        }
+        
+        .password-container .toggle-btn {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+    <script src="script.js"></script>
+<script>
+  const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+
+// Drawing a blue rectangle
+ctx.fillStyle = 'blue';
+ctx.fillRect(50, 50, 400, 400);
+
+// Function to clear a circular area
+function clearCircle(ctx, x, y, radius) {
+    ctx.save();
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+    ctx.fill();
+    ctx.restore();
+}
+
+// Clear a circle at (150, 150) with radius 50
+clearCircle(ctx, 150, 150, 50);
+
+// Clear another circle at (300, 300) with radius 100
+clearCircle(ctx, 300, 300, 100);
+
+
+</script>
+
+</body>
+</html>
